@@ -32,6 +32,7 @@ function image()
 {
 	return src(files.imagePath)
 	.pipe(dest('Public/images'))
+	.pipe(browserSync.stream())
 	.pipe(livereload());  
 }
 // Tasks for Concatenating And Minifying JavaScript and CSS Files
